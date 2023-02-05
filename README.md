@@ -1,1 +1,9 @@
 # Load-Balancing-in-Network-of-Servers
+
+Suppose there is a graph which represents the network of computer systems in SRM University data center. The nodes represent the computer system, and a weight is assigned to that node represent the maximum number of applications that node can execute. The edges connecting the computer systems represent the direct connections between the nodes/ computer systems. Assume that jobs are submitted to the system through any node and a node can not process more jobs beyond it’s weight/ capacity. If any job submitted to the system can not process that job then that job must be transferred to its adjacent nodes for processing.
+
+If that node is unable to process, then it further transferred to another adjacent node till it get executed with some node. This transfer of jobs from one node to another is called as migration. You have to design an algorithm to minimize the total number of migrations and report the number of migrations in a given settings. The input to the system is the number of nodes and their weight or capacity and the interconnections among the nodes. Jobs are submitted
+randomly at any node. Figure 1 represents an example for the stated problem. Suppose you have 4 nodes and each node have it’s capacity (written inside the circle). The current configurations of jobs assigned to each node are represented by individual queues of each node. Suppose a new job J14 submitted to node N2 then it won’t be executed by node N2 because it goes beyond the processing capacity of the node N2. The job J14 can be migrated to N1 or N4 not to both servers. For all cases take 10×10 servers, i.e. 100 servers arranged in grid.
+
+
+Assume that the servers from a grid and all servers have different capacity, jobs have different processing time. Input parameters: Each server capacity is random[50 – 100] and jobs have processing time random[1 - 20].
